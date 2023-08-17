@@ -7,7 +7,7 @@ export const PriceList: CollectionConfig = {
   },
   admin: {
     useAsTitle: "title",
-    defaultColumns: ["title", "slug", "updatedAt"],
+    defaultColumns: ["title", "price", "description", "type"],
     group: "Page Content",
   },
   fields: [
@@ -17,13 +17,24 @@ export const PriceList: CollectionConfig = {
       required: true,
     },
     {
+      name: "type",
+      type: "select",
+      required: true,
+      options: [
+        { label: "JR hytti", value: "jr_hytti" },
+        { label: "Tuplis hytti", value: "tp_hytti" },
+        { label: "Approlippu", value: "appro" },
+      ],
+      defaultValue: "jr_hytti",
+    },
+    {
       name: "price",
       type: "text",
       required: true,
     },
     {
       name: "description",
-      type: "richText",
+      type: "text",
       required: true,
     },
   ],
