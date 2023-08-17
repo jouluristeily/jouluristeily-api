@@ -26,7 +26,7 @@ export const Events: CollectionConfig = {
       type: "date",
       required: true,
       admin: {
-        date: { pickerAppearance: "dayAndTime" },
+        date: { pickerAppearance: "timeOnly" },
       },
     },
     {
@@ -34,7 +34,7 @@ export const Events: CollectionConfig = {
       type: "date",
       required: true,
       admin: {
-        date: { pickerAppearance: "dayAndTime" },
+        date: { pickerAppearance: "timeOnly" },
       },
     },
     {
