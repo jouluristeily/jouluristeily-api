@@ -13,6 +13,9 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
+  rateLimit: {
+    trustProxy: true,
+  },
   collections: [Content, Events, PriceList, Users],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
