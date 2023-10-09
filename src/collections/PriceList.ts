@@ -9,6 +9,9 @@ export const PriceList: CollectionConfig = {
     useAsTitle: "title",
     defaultColumns: ["title", "price", "description", "type"],
     group: "Page Content",
+    pagination: {
+      defaultLimit: 50,
+    },
   },
   fields: [
     {

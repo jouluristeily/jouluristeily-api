@@ -20,6 +20,9 @@ export const Content: CollectionConfig = {
       name: "body",
       type: "richText",
       required: true,
+      admin: {
+        elements: ["h1", "h2", "h3", "h4", "link", "textAlign"],
+      },
     },
   ],
 };

@@ -9,7 +9,11 @@ export const Events: CollectionConfig = {
     useAsTitle: "title",
     defaultColumns: ["title", "slug", "updatedAt"],
     group: "Events",
+    pagination: {
+      defaultLimit: 50,
+    },
   },
+
   fields: [
     {
       name: "title",
