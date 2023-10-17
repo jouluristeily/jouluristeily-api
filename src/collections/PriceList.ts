@@ -27,6 +27,7 @@ export const PriceList: CollectionConfig = {
         { label: "JR hytti", value: "jr_hytti" },
         { label: "Tuplis hytti", value: "tp_hytti" },
         { label: "Approlippu", value: "appro" },
+        { label: "Ruokailu", value: "ruokailu" },
       ],
       defaultValue: "jr_hytti",
     },
