@@ -1,8 +1,15 @@
 import { CollectionConfig } from "payload/types";
 import {
-  HTMLConverterFeature,
+  AlignFeature,
+  BoldTextFeature,
+  HeadingFeature,
+  ItalicTextFeature,
+  LinkFeature,
+  OrderedListFeature,
+  ParagraphFeature,
+  UnderlineTextFeature,
+  UnorderedListFeature,
   lexicalEditor,
-  lexicalHTML,
 } from "@payloadcms/richtext-lexical";
 
 export const Pages: CollectionConfig = {
@@ -12,9 +19,11 @@ export const Pages: CollectionConfig = {
   },
   admin: {
     useAsTitle: "title",
-    defaultColumns: ["title", "slug", "updatedAt"],
+    defaultColumns: ["title", "updatedAt"],
     group: "Page Content",
   },
+
+  defaultSort: "title",
 
   fields: [
     {
@@ -27,14 +36,18 @@ export const Pages: CollectionConfig = {
       name: "content",
       type: "richText",
       editor: lexicalEditor({
-        features: ({ defaultFeatures }) => [
-          ...defaultFeatures,
-          HTMLConverterFeature({}),
+        features: ({}) => [
+          BoldTextFeature(),
+          ItalicTextFeature(),
+          UnderlineTextFeature(),
+          ParagraphFeature(),
+          HeadingFeature({}),
+          AlignFeature(),
+          UnorderedListFeature(),
+          OrderedListFeature(),
+          LinkFeature({}),
         ],
       }),
     },
-    lexicalHTML("content", {
-      name: "content_html",
-    }),
   ],
 };
