@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { slateEditor } from "@payloadcms/richtext-slate";
 
 export const Content: CollectionConfig = {
   slug: "content",
@@ -20,9 +21,12 @@ export const Content: CollectionConfig = {
       name: "body",
       type: "richText",
       required: true,
-      admin: {
-        elements: ["h1", "h2", "h3", "h4", "link", "textAlign"],
-      },
+      editor: slateEditor({
+        admin: {
+          elements: ["h1", "h2", "h3", "h4", "link", "textAlign"],
+        },
+      }),
     },
+    { name: "body2", type: "richText", required: true },
   ],
 };
