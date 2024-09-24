@@ -27,6 +27,6 @@ export const Content: CollectionConfig = {
         },
       }),
     },
-    { name: "body2", type: "richText", required: true },
+    { name: "body2", type: "richText" },
   ],
 };
