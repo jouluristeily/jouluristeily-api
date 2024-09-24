@@ -28,6 +28,7 @@ export const PriceList: CollectionConfig = {
         { label: "Tuplis hytti", value: "tp_hytti" },
         { label: "Approlippu", value: "appro" },
         { label: "Ruokailu", value: "ruokailu" },
+        { label: "Tuplis-Ruokailu", value: "tp_ruokailu" },
       ],
       defaultValue: "jr_hytti",
     },
@@ -39,7 +40,7 @@ export const PriceList: CollectionConfig = {
     {
       name: "description",
       type: "text",
-      required: true,
+      required: false,
     },
   ],
 };
